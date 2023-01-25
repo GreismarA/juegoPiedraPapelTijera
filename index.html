@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.pinimg.com/564x/41/a9/8f/41a98fb3cef655eb56658464a4112f15.jpg">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Juego: Piedra, Papel o Tijera</title>
+    <!-- Aquí van los scripts -->
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1 id="resultado" class="text-center text-2xl text-teal-300 py-4 md:text-5xl md:pt-24">Resultado</h1>
+        <section class="flex flex-col md:flex-row md:justify-around md:mt-20 xl:mt-16">
+            <div class="container-jugador rounded-2xl w-max mx-auto flex flex-col py-8 gap-y-4 items-center md:gap-y-8 md:h-max lg:px-4 xl:p-10">
+                <h4 class="md:text-2xl text-white">Victorias: <span id="victorias"></span></h4>
+                <h2 class="md:text-4xl text-teal-300">Jugador 1</h2>
+                <div>
+                    <i class="fa-solid fa-hand-fist text-red-300 text-4xl px-4 hover:scale-150 hover:text-white" onclick="jugar(0)"></i>
+                    <i class="fa-solid fa-hand text-red-300 text-4xl px-4 hover:scale-150 hover:text-white" onclick="jugar(1)"></i>
+                    <i class="fa-solid fa-hand-peace text-red-300 text-4xl px-4 hover:scale-150 hover:text-white" onclick="jugar(2)"></i>
+                </div>
+            </div>
+            <div class="flex flex-col items-center py-8">
+                <h4 class="text-lg text-teal-300 md:text-4xl">Historial</h4>
+                <div id="historial" class="text-white text-center md:text-xl md:py-4"></div>
+            </div>
+            <div class="container-jugador rounded-2xl w-max mx-auto flex flex-col items-center py-8 gap-y-4 mb-8 md:gap-y-8 md:mb-0 md:h-max lg:px-4 xl:p-10">
+                <h4 class="md:text-2xl text-white">Victorias: <span id="derrotas"></span></h4>
+                <h2 class="md:text-4xl text-teal-300">Jugador 2</h2>
+                <div>
+                    <i class="fa-solid fa-hand-fist text-red-300 text-4xl px-4 hover:scale-150 hover:text-white"></i>
+                    <i class="fa-solid fa-hand text-red-300 text-4xl px-4 hover:scale-150 hover:text-white"></i>
+                    <i class="fa-solid fa-hand-peace text-red-300 text-4xl px-4 hover:scale-150 hover:text-white"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
